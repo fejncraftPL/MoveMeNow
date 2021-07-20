@@ -1,6 +1,5 @@
 package net.craftminecraft.bungee.movemenow;
 
-import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.plugin.Command;
@@ -21,6 +20,8 @@ public class ReloadCommand extends Command {
         switch (args[0]) {
             case "reload":
                 plugin.loadConfig();
+                sender.sendMessage(new TextComponent("Reload complete."));
+                break;
         }
     }
 }
